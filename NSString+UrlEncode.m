@@ -5,7 +5,7 @@
 //  Copyright (c) 2013 Kevin Renskers. All rights reserved.
 //
 
-#import "NSString+UrlEncoding.h"
+#import "NSString+UrlEncode.h"
 
 @implementation NSString (UrlEncode)
 

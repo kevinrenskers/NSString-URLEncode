@@ -21,5 +21,4 @@
                                                                                  CFStringConvertNSStringEncodingToEncoding(encoding));
 }
 
-
 @end

@@ -12,4 +12,7 @@
 - (NSString *)urlEncode;
 - (NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding;
 
+- (NSString *)urlDecode;
+- (NSString *)urlDecodeUsingEncoding:(NSStringEncoding)encoding;
+
 @end

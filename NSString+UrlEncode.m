@@ -21,4 +21,15 @@
                                                                                  CFStringConvertNSStringEncodingToEncoding(encoding));
 }
 
+- (NSString *)urlDecode {
+    return [self urlDecodeUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (NSString *)urlDecodeUsingEncoding:(NSStringEncoding)encoding {
+	return (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
+                                                                                                 (__bridge CFStringRef)self,
+                                                                                                 CFSTR(""),
+                                                                                                 CFStringConvertNSStringEncodingToEncoding(encoding));
+}
+
 @end

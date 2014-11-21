@@ -1,4 +1,4 @@
-NSString-UrlEncode
+NSString-URLEncode
 ==================
 
-Category that adds urlEncode to NSString.
+Category that adds URLEncode to NSString.

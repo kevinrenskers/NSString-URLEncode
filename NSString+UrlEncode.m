@@ -1,19 +1,19 @@
 //
-//  NSString+UrlEncode.m
+//  NSString+URLEncode.m
 //
 //  Created by Kevin Renskers on 31-10-13.
 //  Copyright (c) 2013 Kevin Renskers. All rights reserved.
 //
 
-#import "NSString+UrlEncode.h"
+#import "NSString+URLEncode.h"
 
-@implementation NSString (UrlEncode)
+@implementation NSString (URL)
 
-- (NSString *)urlEncode {
-    return [self urlEncodeUsingEncoding:NSUTF8StringEncoding];
+- (NSString *)URLEncode {
+    return [self URLEncodeUsingEncoding:NSUTF8StringEncoding];
 }
 
-- (NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding {
+- (NSString *)URLEncodeUsingEncoding:(NSStringEncoding)encoding {
     return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
                                                                                  (__bridge CFStringRef)self,
                                                                                  NULL,
@@ -21,11 +21,11 @@
                                                                                  CFStringConvertNSStringEncodingToEncoding(encoding));
 }
 
-- (NSString *)urlDecode {
-    return [self urlDecodeUsingEncoding:NSUTF8StringEncoding];
+- (NSString *)URLDecode {
+    return [self URLDecodeUsingEncoding:NSUTF8StringEncoding];
 }
 
-- (NSString *)urlDecodeUsingEncoding:(NSStringEncoding)encoding {
+- (NSString *)URLDecodeUsingEncoding:(NSStringEncoding)encoding {
 	return (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
                                                                                                  (__bridge CFStringRef)self,
                                                                                                  CFSTR(""),

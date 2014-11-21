@@ -7,7 +7,7 @@
 
 #import "NSString+URLEncode.h"
 
-@implementation NSString (URL)
+@implementation NSString (URLEncode)
 
 - (NSString *)URLEncode {
     return [self URLEncodeUsingEncoding:NSUTF8StringEncoding];

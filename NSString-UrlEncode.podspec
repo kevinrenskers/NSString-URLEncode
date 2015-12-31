@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NSString-UrlEncode"
-  s.version      = "2.0.0"
+  s.version      = "2.1.0"
   s.summary      = "Category that adds URLEncode and URLDecode to NSString."
   s.homepage     = "https://github.com/kevinrenskers/NSString-URLEncode"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
